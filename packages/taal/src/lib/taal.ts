@@ -14,4 +14,9 @@ function getTaalByBeats(beats: number): readonly Taal[] {
   return taals.filter((taal) => taal.beats === beats);
 }
 
-export { getTaals, getTaalByName, getTaalByBeats };
+function getTaalById(id: string): Taal | undefined {
+  const filteredTaal = taals.filter((taal) => taal.id === id);
+  return filteredTaal.length ? filteredTaal[0] : undefined;
+}
+
+export { getTaals, getTaalByName, getTaalByBeats, getTaalById };
