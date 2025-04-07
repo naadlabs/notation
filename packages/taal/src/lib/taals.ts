@@ -1,6 +1,7 @@
 import type { Taal } from './types.js';
 export const taals: readonly Taal[] = [
   {
+    id: '7c7c6c57-17e5-4f98-960a-7170619237c2',
     name: 'Dadra',
     beats: 6,
     vibhag: [
@@ -10,6 +11,7 @@ export const taals: readonly Taal[] = [
     notes: ['Dha', 'Dhin', 'Na', 'Dha', 'Tin', 'Na'],
   },
   {
+    id: 'cb17fe44-14de-471f-a5b9-1c2181267d48',
     name: 'Teentaal',
     beats: 16,
     vibhag: [
@@ -38,6 +40,7 @@ export const taals: readonly Taal[] = [
     ],
   },
   {
+    id: 'c1e4ad52-2d04-4502-abd6-fbc6b8b8224e',
     name: 'Jhaptal',
     beats: 10,
     vibhag: [
@@ -60,6 +63,7 @@ export const taals: readonly Taal[] = [
     ],
   },
   {
+    id: 'b41711d2-22a9-444b-8ae2-ba51644c9483',
     name: 'Rupak',
     beats: 7,
     vibhag: [
@@ -70,6 +74,7 @@ export const taals: readonly Taal[] = [
     notes: ['Tin', 'Tin', 'Na', 'Dhin', 'Na', 'Dhin', 'Na'],
   },
   {
+    id: '1f1253c2-5315-4155-bacf-f78bb951296b',
     name: 'Keherwa',
     beats: 8,
     vibhag: [
@@ -79,6 +84,7 @@ export const taals: readonly Taal[] = [
     notes: ['Dha', 'Ge', 'Na', 'Ti', 'Na', 'Ka', 'Dhin', 'Na'],
   },
   {
+    id: 'f2514480-f077-48c3-8955-37c22c65c3cd',
     name: 'Ektaal',
     beats: 12,
     vibhag: [
@@ -105,6 +111,7 @@ export const taals: readonly Taal[] = [
     ],
   },
   {
+    id: 'd57e31ad-7a9a-4cf4-9ead-f89cf5509bab',
     name: 'Deepchandi',
     beats: 14,
     vibhag: [
@@ -115,6 +122,7 @@ export const taals: readonly Taal[] = [
     ],
   },
   {
+    id: '6efd2ea7-39d8-4224-8652-e1fbadbe67f4',
     name: 'Tilwada',
     beats: 16,
     vibhag: [
@@ -125,6 +133,7 @@ export const taals: readonly Taal[] = [
     ],
   },
   {
+    id: '827e9dda-ab5c-4509-bf86-00c18149fbb8',
     name: 'Jhoomra',
     beats: 14,
     vibhag: [
@@ -135,6 +144,7 @@ export const taals: readonly Taal[] = [
     ],
   },
   {
+    id: '1b9fcbfb-0fea-42ed-b914-bbd41ac91965',
     name: 'Dhamar',
     beats: 14,
     vibhag: [

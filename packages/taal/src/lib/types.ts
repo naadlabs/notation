@@ -4,6 +4,7 @@ type Vibhag = {
 };
 
 export type Taal = {
+  readonly id: string; // Unique identifier for the taal
   readonly name: string; // Name of the taal (e.g., Teentaal, Dadra)
   readonly beats: number; // Total beats in the cycle
   readonly vibhag: readonly Vibhag[]; // Ensuring vibhag array is read-only
