@@ -1,99 +1,79 @@
 {
-    "$schema": "https://json-schema.org/draft/2020-12/schema",
-    "title": "Indian Classical Music Notation",
-    "description": "A schema for Indian Classical Music Notation",
-    "type": "object",
-    "properties": {
-        "name": {
-            "type": "string",
-            "description": "The name of composition"
-        },
-        "composer": {
-            "type": "string",
-            "description": "The composer of composition"
-        },
-        "notation": {
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Indian Classical Music Notation",
+  "description": "A schema for Indian Classical Music Notation",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of composition"
+    },
+    "composer": {
+      "type": "string",
+      "description": "The composer of composition"
+    },
+    "taal": {
+      "$ref": "https://raw.githubusercontent.com/naadlabs/notation/refs/heads/main/schemas/taal-schema.json"
+    },
+    "notation": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "section_title": {
+            "type": "string"
+          },
+          "taal": {
+            "$ref": "https://raw.githubusercontent.com/naadlabs/notation/refs/heads/main/schemas/taal-schema.json"
+          },
+          "beats": {
             "type": "array",
             "items": {
-                "type": "object",
-                "properties": {
-                    "section_title": {
-                        "type": "string"
-                    },
-                    "taal": {
-                        "type": "object",
-                        "properties": {
-                            "name": {
-                                "type": "string",
-                                "description": "Name of the tala"
-                            },
-                            "beats": {
-                                "type": "integer",
-                                "description": "Total number of beats in the tala",
-                                "minimum": 1
-                            },
-                            "vibhag": {
-                                "type": "array",
-                                "description": "List of divisions (vibhags) with their beat positions and values",
-                                "items": {
-                                    "type": "object",
-                                    "properties": {
-                                        "beat": {
-                                            "type": "integer",
-                                            "description": "Beat number within the tala cycle",
-                                            "minimum": 1
-                                        },
-                                        "value": {
-                                            "type": "string",
-                                            "description": "Value assigned to the beat (e.g., X for clap, 0 for wave)"
-                                        }
-                                    },
-                                    "required": [
-                                        "beat",
-                                        "value"
-                                    ]
-                                }
-                            },
-                            "notes": {
-                                "type": "array",
-                                "description": "Sequence of syllables (bols) representing the tala",
-                                "items": {
-                                    "type": "string",
-                                    "description": "Bol (syllable) of the tala"
-                                }
-                            }
-                        },
-                        "required": [
-                            "name",
-                            "beats",
-                            "vibhag"
-                        ]
-                    },
-                    "notes": {
-                        "type": "array",
-                        "items": {
-                            "type": "object",
-                            "properties": {
-                                "note": {
-                                    "type": "string"
-                                },
-                                "lyrics": {
-                                    "type": "string"
-                                }
-                            },
-                            "required": [
-                                "note",
-                                "lyrics"
-                            ]
-                        }
-                    }
+              "type": "object",
+              "properties": {
+                "notes": {
+                  "type": "string"
                 },
-                "required": [
-                    "section_title",
-                    "taalDescription",
-                    "notes"
-                ]
+                "lyrics": {
+                  "type": "string"
+                }
+              },
+              "required": ["notes", "lyrics"]
             }
-        }
+          }
+        },
+        "required": ["section_title", "beats"]
+      }
     }
+  },
+  "required": ["name", "notation"],
+  "allOf": [
+    {
+      "if": {
+        "not": {
+          "required": ["taal"]
+        }
+      },
+      "then": {
+        "properties": {
+          "notation": {
+            "items": {
+              "required": ["taal"]
+            }
+          }
+        }
+      },
+      "else": {
+        "properties": {
+          "notation": {
+            "items": {
+              "properties": {
+                "taal": false
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
 }
