@@ -156,7 +156,7 @@ export const taals: readonly Taal[] = [
   },
   {
     id: 'a1b2c3d4-e5f6-7890-1234-567890abcdef',
-    name: 'Panchan Swari',
+    name: 'Pancham Swari',
     beats: 15,
     vibhag: [
       { beat: 1, value: 'X' },
