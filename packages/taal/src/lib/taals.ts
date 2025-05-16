@@ -154,4 +154,28 @@ export const taals: readonly Taal[] = [
       { beat: 11, value: '3' },
     ],
   },
+  {
+    id: 'a1b2c3d4-e5f6-7890-1234-567890abcdef',
+    name: 'Pancham Swari',
+    beats: 15,
+    vibhag: [
+      { beat: 1, value: 'X' },
+      { beat: 4, value: '2' },
+      { beat: 8, value: '0' },
+      { beat: 12, value: '3' },
+    ],
+  },
+  {
+    id: 'b2c3d4e5-f6a7-8901-2345-67890abcdef0',
+    name: 'Chaar Taal',
+    beats: 12,
+    vibhag: [
+      { beat: 1, value: 'X' },
+      { beat: 3, value: '0' },
+      { beat: 5, value: '2' },
+      { beat: 7, value: '0' },
+      { beat: 9, value: '3' },
+      { beat: 11, value: '4' },
+    ],
+  },
 ];
