@@ -144,6 +144,17 @@ export const taals: readonly Taal[] = [
     ],
   },
   {
+    id: '1b9fcbfb-0fea-42ed-b914-bbd41ac91965',
+    name: 'Dhamar',
+    beats: 14,
+    vibhag: [
+      { beat: 1, value: 'X' },
+      { beat: 6, value: '2' },
+      { beat: 8, value: '0' },
+      { beat: 11, value: '3' },
+    ],
+  },
+  {
     id: 'f3a9b1c8-6e2d-4f7a-8b1e-9c0d5a4f6b7e',
     name: 'Farodast',
     beats: 14,
