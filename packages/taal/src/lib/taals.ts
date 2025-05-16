@@ -116,9 +116,9 @@ export const taals: readonly Taal[] = [
     beats: 14,
     vibhag: [
       { beat: 1, value: 'X' },
-      { beat: 4, value: '0' },
-      { beat: 7, value: 'X' },
-      { beat: 12, value: 'X' },
+      { beat: 4, value: '2' },
+      { beat: 8, value: '0' },
+      { beat: 11, value: '3' },
     ],
   },
   {
